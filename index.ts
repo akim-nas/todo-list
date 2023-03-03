@@ -1,13 +1,15 @@
-function getTask(): void {
-    let user_task: string = prompt("Input task: ");
+let addItem = (user_task: string): void => {
+    const p_itm: Element = document.createElement("p"); // create para element for remove
+    const p_txt: Node = document.createTextNode(user_task); // add the text to para element
 
-    addItem(user_task);
+    p_itm.appendChild(p_txt); // append txt to para
+    document.getElementById("todoList").appendChild(p_itm); // add to todoList div
 }
 
-function addItem(user_task: string): void {
-    const p_itm: Element = document.createElement("p");
-    const p_txt: Node = document.createTextNode(user_task);
+let getTask = (): void => {
+    let user_task: string = prompt("Input task: "); // ask user for task (duh)
 
-    p_itm.appendChild(p_txt);
-    document.getElementById("todoList").appendChild(p_itm);
+    if (user_task != null) { // if they don't put anything dont pull null basically
+        addItem(user_task);
+    }
 }

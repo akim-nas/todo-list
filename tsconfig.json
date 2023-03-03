@@ -1,7 +1,13 @@
 {
     "compilerOptions": {
-        "target": "ES5",
+        "target": "ES6",
         "module": "CommonJS",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
         "sourceMap": true
-    }
+    },
+    "files": [
+        "index.ts"
+    ]
 }
