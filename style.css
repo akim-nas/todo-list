@@ -1,0 +1,8 @@
+.task-btn {
+    background-color: transparent;
+    border: none;
+}
+
+.task-btn:hover {
+    background-color: hsl(0, 100%, 50%, 25%);;
+}
